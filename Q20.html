@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="dispSec()">Start</button>
+    <button onclick="clearInterval(int1)">Stop</button>
+    <div id="display">
+
+    </div>
+    <script>
+        display = document.getElementById("display")
+        function dispSec() {
+            dt = new Date();
+            ss = dt.getSeconds();
+            display.innerHTML = ss;
+        }
+        int1=setInterval(dispSec,1000);
+    </script>
+</body>
+
+</html>
