@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <!-- <script>
+        count = 0
+        display = document.getElementById("display")
+        function counter()
+        {
+            count++;
+            display.innerHTML = count;
+        }
+    </script> --> 
+    <!-- <button onclick="clock()"> Click it!</button> -->
+    <div id="dc">0</div>
+    
+    <script>
+        // count = 0
+        dClock = document.getElementById("dc");
+        // cn =document.getElementById("c");
+        function clock()
+        {
+            dt = new Date();
+            hh = dt.getHours();
+            mm = dt.getMinutes();
+            ss = dt.getSeconds();
+            time = hh+":"+mm+":"+ss;
+            // count=count+1;
+            // display.innerHTML = count;
+            // document.write(time);
+            dClock.innerHTML = time
+            // cn.innerHTML = count;
+             setInterval(clock,1000)
+        }
+         setInterval(clock,1000)
+    </script>
+</body>
+</html>

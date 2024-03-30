@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="message" >
+        
+    </div>
+
+    <script>
+        function greeting(){
+            const curDate = new Date();
+            const hours =  curDate.getHours();
+            let greet;
+            if (hours >=0 && hours<12){
+                greet= "Good Morning";
+            }
+            else if(hours >=12 && hours<17){
+                greet="Good Afternoon";
+            }
+            else{
+                greet="Good Evening";
+            }
+
+            return greet;
+        }
+        function displayM(){
+            const name = prompt("Enter your name");
+            const Greets = greeting();
+            const greetDiv = document.getElementById('message');
+            greetDiv.textContent= `${Greets}, ${name}! Click to hide.`;
+
+            greetDiv.addEventListener("click",function(){
+                this.style.display="none";
+            })
+
+        }
+        window.onload = displayM;
+    </script>
+    
+    
+</body>
+</html>

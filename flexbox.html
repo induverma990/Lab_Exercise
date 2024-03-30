@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FLEXBOX</title>
     <style>
         div {
             height: 200px;
@@ -16,57 +16,68 @@
             margin: 10px;
         }
         .container{
-            display: flex;
-            width: auto;
-            height: 100vmin;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-content: space-evenly;
-
+            display:flex;
+            width:auto;
+            height:100vmin;
+            flex-wrap:wrap;
+            flex-direction:row;
+            justify-content:space-evenly;/*no overlapping for horizontal alignment*/
+            align-content:space-evenly;/*vertical alignment*/
+           /* align-items:end;all items have different height and width*/
+           
         }
         .black{
             background-color: black;
         }
         .container div{
-            display: flex;
+            display:flex;
             justify-content: center;
             align-content: space-evenly;
-            align-items: center;
-            border: blue 10px double;
+            align-items:center;
+            border:blue 10px double;
         }
         .d1{
-            position: relative;
-            padding: 50px;box-sizing: border-box;
-        }
-        .d1 img{
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            z-index: 9;
+            position:relative;
+            padding:50px;
+            box-sizing:border-box;
+           
         }
         .d2:hover{
-        /*    transform: rotate(360deg) scale(2) translate(200px);*/
-        /*   transform: scale(2) translate(200px);*/
-            transition: 5s;
+         transform:rotate(360deg) scale(2) translate(200px);
+           /*transform:scale(2) translate(200px);*/
+            transition:1s;
             background-color: black;
-            color: red;
-            text-shadow: 0 0 20px white;
+            color:red;
+            text-shadow:0 0 20px white;
+            box-shadow:0 0 20px white ;
+            
+        }
+        .d1 img{
+            height:100%;
+            width:100%;
+            position:absolute;
+            z-index:9;
         }
     </style>
 </head>
 
 <body>
     <div class="container black">
-        <div class="d1">
-            <img src="images/19.jpg" alt="">
-            <span style="z-index: 10;">1</span></div>
-        <div class="d2">2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
+        <div class="d1 d2"> 
+            <img src="images/19.jpg">
+           <span style="z-index:10">1</span></div>
+        <div class="d1 d2">
+            <img src="images/18.jpeg">2</div>
+        <div class="d1 d2">
+            <img src="images/13.jpeg">3</div>
+        <div class="d1 d2">
+            <img src="images/10.jpeg">4</div>
+        <div class="d1 d2">
+            <img src="images/26.jpeg">5</div>
+        <div class="d1 d2">
+            <img src="images/24.jpeg">6</div>
+        <div class="d1 d2">
+            <img src="images/6.jpg">7</div>
     </div>
 </body>
 

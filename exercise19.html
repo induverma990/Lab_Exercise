@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .black{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        row=prompt("Enter numer of rows:")
+        col = prompt("Enter numer of columns:")
+   </script>
+    <table border="1">
+        <script>
+            for (i=0; i<row;i++)
+            {
+                document.write("<tr cellspacing='5' cellpadding='2'>");
+                for(j=0;j<col;j++)
+                {
+                   document.write("<td>" + (i+1)*(j+1) +"</td>");
+
+                }
+                document.write("</tr>"); 
+            }
+        </script>
+        <!-- <script>
+            if((i+j)%2==0){}
+        </script> -->
+    </table>
+   
+</body>
+</html>
